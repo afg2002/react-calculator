@@ -1,0 +1,103 @@
+#root {
+  margin: 0;
+  padding: 0;
+}
+
+.App{
+  background-color: darksalmon;
+  width: 500px;
+  height: 650px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.App h1{
+  text-align: center;
+  color: whitesmoke;
+}
+
+.input-wrapper{
+  background-color: white;
+  text-align: right;
+  /* display: flex; */
+  margin: 0 20px 0 20px;
+  padding: 0 10px 0 5px;
+  align-items: center;
+  height: 60px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+.input-wrapper p{
+  font-size: larger;
+}
+
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* Disable input focus */
+input[type=number]:focus{
+  outline: none;
+}
+
+#hasil{
+  padding: 5px;
+  border-radius: 2px;
+  border: none;
+  height: 30px;
+  width: 85%;
+  margin-bottom: 15px;
+}
+
+.wrapper{
+  /* display: flex; */
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  /* background-color: aqua; */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex:1;
+}
+
+.wrapper-inside{
+  /* background-color: black; */
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+}
+button{
+  width: 20%;
+  font-size: larger;
+  color: black;
+  border-radius: 5px;
+  border: none;
+}
+
+.btnRight{
+  background-color:bisque;
+}
+
+#btnSamaDengan{
+  background-color:deepskyblue;
+}
+
+#detail{
+  color: gray;
+  font-size: small;
+  margin-right: 5px;
+}
