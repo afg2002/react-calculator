@@ -20,6 +20,21 @@ function App() {
     setCalc(calc.slice(0,-1))
   }
 
+  function sqrtHandler() {
+      try {
+        let SQRT = Math.sqrt(eval(calc))
+        setCalc(SQRT.toString())
+      } catch (e) {
+        if(e){return}
+      }
+  }
+
+  function powHandler() {
+    let powNumber = prompt("Pangkat berapa ? :")
+    let POW = Math.pow(eval(calc),powNumber)
+    setCalc(POW.toString())
+  }
+
   function btnPushToVal(e) {
     let targetValue = e.target.value
     let targetValueStr = targetValue.toString()
@@ -35,13 +50,14 @@ function App() {
 
   useEffect(()=>{
     const arrCalc = [...calc]
-    console.log(arrCalc)
     const arrCalcJoin = arrCalc.join('')
     try {
       const newVal = eval(arrCalcJoin)
       setResult(newVal)
     } catch (error) {
-      
+      if(error){
+        setResult("error")
+      }
     }
 
   },[calc,result])
@@ -61,7 +77,9 @@ function App() {
       <div className='wrapper'>
         <div className="wrapper-inside">
           <button onClick={deleteHandler}>DEL</button>
-          <button onClick={deleteOneChar}>{"->"}</button>
+          <button onClick={sqrtHandler}>SQRT</button>
+          <button onClick={powHandler}>^</button>
+          <button onClick={deleteOneChar} >{"->"}</button>
         </div>
         <div className="wrapper-inside">
           <button onClick={btnPushToVal} value={"7"}>7</button>
